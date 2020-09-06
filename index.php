@@ -35,7 +35,7 @@
     <header>
         
        <div class="topimg">
-           <img class="sp" src=ßcho get_template_directory_uri(); ?>/images/topsp.jpg" alt="top画像">
+           <img class="sp" src="<?php echo get_template_directory_uri(); ?>/images/topsp.jpg" alt="top画像">
            <img class="pc" src="<?php echo get_template_directory_uri(); ?>/images/toppc.jpg" alt="top画像">
            <div class="box1"></div>
            
@@ -44,6 +44,34 @@
        </div>
     </header>
     <main>
+    
+    <div class="loopsample">
+    <h4>記事ループのサンプル</h4>
+    <?php /* ↓↓記事ループのサンプルコード↓↓ */
+    $wpq = new WP_Query(array(
+        'post_type' => array('post'),  
+        'category_name' => 'city'   
+    ));
+    if ( $wpq->have_posts() ) :
+        while ( $wpq->have_posts() ): $wpq->the_post();
+    ?>
+            <h5>Title</h5>
+            <p><?php echo get_the_title(); ?></p>
+            <h5>URL</h5>
+            <p><?php echo get_the_permalink(); ?></p>
+            <h5>Image</h5>
+            <p><?php echo get_the_post_thumbnail_url(); ?></p>
+            <h5>Except</h5>
+            <p><?php echo get_the_excerpt(); ?></p>
+    <?php
+        endwhile;
+    endif;
+    wp_reset_query();
+    
+    /* ↑↑記事ループのサンプルコード↑↑ */
+    ?>
+    </div>
+
         <div class="fadein">
         <h2>where're you going?</h2>
         </div>
