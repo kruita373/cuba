@@ -1,0 +1,360 @@
+/*
+Theme Name: cuba
+Description: 不思議な魅力
+Author: minamiß
+*/
+
+@charset "UTF-8";
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: 'Marck Script', cursive,'Sawarabi Mincho', sans-serif,'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ヒラギノ角ゴシック','Hiragino Sans','ＭＳ ゴシック',sans-serif;
+  background-image: url("../images/bgsp.jpg");
+  background-image: repeat; }
+
+.topimg {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto; }
+  @media (min-width: 480px) {
+    .topimg {
+      max-width: 1200px; } }
+
+img {
+  width: 100%;
+  height: 100%; }
+
+.box1 {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  background-color: #f9b002;
+  top: 84px;
+  left: 20px;
+  opacity: 0.3; }
+  @media (min-width: 480px) {
+    .box1 {
+      width: 50%;
+      height: 75%;
+      top: 12%;
+      left: 25%; } }
+
+.comment {
+  position: absolute;
+  top: 39%;
+  left: 18%;
+  color: white;
+  opacity: 0.8;
+  text-shadow: 2px 2px 2px rgba(105, 105, 105, 0.2); }
+  @media (min-width: 480px) {
+    .comment {
+      top: 39%;
+      left: 30%;
+      font-size: 2vw; } }
+  @media (min-width: 1200px) {
+    .comment {
+      font-size: 29px; } }
+
+h1 {
+  position: absolute;
+  top: 46%;
+  left: 22%;
+  color: white;
+  opacity: 0.8;
+  font-size: 80px;
+  text-shadow: 2px 2px 2px rgba(105, 105, 105, 0.5); }
+  @media (min-width: 480px) {
+    h1 {
+      top: 46%;
+      left: 34%;
+      font-size: 11vw; } }
+  @media (min-width: 1200px) {
+    h1 {
+      font-size: 130px; } }
+
+h2 {
+  background: #6bb8b7;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-size: 40px;
+  opacity: 0.8;
+  text-shadow: 2px 2px 2px rgba(105, 105, 105, 0.5); }
+  @media (min-width: 480px) {
+    h2 {
+      padding: 20px;
+      font-size: 8vw;
+      margin-bottom: 70px; } }
+  @media (min-width: 1200px) {
+    h2 {
+      font-size: 80px; } }
+
+.h2_2 {
+  margin-top: 20px; }
+  @media (min-width: 480px) {
+    .h2_2 {
+      margin: 70px auto; } }
+
+@media (min-width: 480px) {
+  .mainbox {
+    display: flex;
+    width: 100%; }
+    .mainbox:nth-child(even) {
+      flex-direction: row-reverse; }
+    .mainbox:nth-child(odd) {
+      flex-direction: row; } }
+
+.mainitem2 {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 15px 5px;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: center; }
+  @media (min-width: 480px) {
+    .mainitem2 {
+      width: 50%;
+      height: auto; } }
+
+.mainitem1 {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+
+@media (min-width: 480px) {
+  .mainitem1, .mainitem2 {
+    width: 50%; } }
+.mainp {
+  font-size: 25px;
+  padding-top: 30px;
+  width: 100%;
+  color: #646262;
+  text-shadow: 1px 1px 1px rgba(105, 105, 105, 0.4); }
+  @media (min-width: 480px) {
+    .mainp {
+      font-size: 3vw; } }
+  @media (min-width: 1200px) {
+    .mainp {
+      font-size: 25px; } }
+
+.mainp2 {
+  font-size: 50px;
+  margin-top: 20px;
+  width: 100%;
+  color: #646262;
+  text-shadow: 2px 2px 2px rgba(105, 105, 105, 0.5); }
+  @media (min-width: 480px) {
+    .mainp2 {
+      font-size: 8vw; } }
+  @media (min-width: 1200px) {
+    .mainp2 {
+      font-size: 80px; } }
+
+.m2_4 {
+  font-size: 30px; }
+  @media (min-width: 480px) {
+    .m2_4 {
+      font-size: 5.5vw; } }
+
+.star {
+  width: 60px;
+  height: auto; }
+
+.f1 {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";
+  font-size: 10px;
+  background-color: #ffffff;
+  margin-top: 70px;
+  margin-bottom: 0px;
+  opacity: 0.5; }
+
+.pc {
+  display: none !important; }
+
+.sp {
+  display: block !important; }
+
+@media only screen and (min-width: 480px) {
+  .pc {
+    display: block !important; }
+
+  .sp {
+    display: none !important; } }
+.fadein {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s; }
+
+a {
+  text-decoration: none; }
+
+a:hover p {
+  color: #6bb8b7; }
+
+.star {
+  animation: 3s linear infinite rotation1; }
+
+@keyframes rotation1 {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+.top2 {
+  position: absolute;
+  top: 20%;
+  left: 22%;
+  color: white;
+  opacity: 0.8;
+  text-shadow: 2px 2px 2px rgba(105, 105, 105, 0.5); }
+  @media (min-width: 480px) {
+    .top2 {
+      top: 20%;
+      left: 34%; } }
+  @media (min-width: 1200px) {
+    .top2 {
+      font-size: 130px; } }
+
+.top2de {
+  left: 40%;
+  top: 20%; }
+  @media (min-width: 480px) {
+    .top2de {
+      left: 45%;
+      top: 20%; } }
+
+.top2cuba {
+  left: 34%;
+  top: 18%; }
+  @media (min-width: 480px) {
+    .top2cuba {
+      left: 42%;
+      top: 18%; } }
+
+@media (min-width: 480px) {
+  .san {
+    height: 35.6vw; } }
+@media (min-width: 1200px) {
+  .san {
+    height: 440px; } }
+
+.items_p1 {
+  font-size: 4.8vw;
+  color: #646262;
+  border-bottom: solid 3px #6bb8b7; }
+  @media (min-width: 480px) {
+    .items_p1 {
+      font-size: 3vw; } }
+
+.items_p2 {
+  font-size: 3.2vw;
+  color: #646262;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro"; }
+  @media (min-width: 480px) {
+    .items_p2 {
+      font-size: 1.92vw; } }
+
+.pain {
+  padding: 20px 20px;
+  box-sizing: border-box;
+  align-items: center;
+  text-align: left;
+  display: block; }
+  @media (min-width: 480px) {
+    .pain {
+      width: 50%; } }
+
+h3 {
+  background: rgba(107, 184, 183, 0.5);
+  color: #ffffff;
+  text-align: center;
+  padding: 4px;
+  margin: 36px 0;
+  font-size: 6vw;
+  text-shadow: 2px 2px 2px rgba(105, 105, 105, 0.5);
+  font-family: 'Sawarabi Mincho', sans-serif,'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ヒラギノ角ゴシック','Hiragino Sans','ＭＳ ゴシック',sans-serif; }
+  @media (min-width: 480px) {
+    h3 {
+      padding: 10px;
+      font-size: 3vw; } }
+  @media (min-width: 1200px) {
+    h3 {
+      font-size: 40px; } }
+
+.going1 {
+  font-size: 4.8vw;
+  font-family: 'Sawarabi Mincho', sans-serif,'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3','メイリオ', Meiryo,'ヒラギノ角ゴシック','Hiragino Sans','ＭＳ ゴシック',sans-serif; }
+  @media (min-width: 480px) {
+    .going1 {
+      font-size: 2.56vw; } }
+  @media (min-width: 1200px) {
+    .going1 {
+      font-size: 32px; } }
+
+.going2 {
+  font-size: 3.2vw; }
+  @media (min-width: 480px) {
+    .going2 {
+      font-size: 1.28vw; } }
+  @media (min-width: 1200px) {
+    .going2 {
+      font-size: 16px; } }
+
+#map1 {
+  width: 70vw;
+  height: 70vw;
+  margin: 0 auto; }
+  @media (min-width: 480px) {
+    #map1 {
+      width: 35.2vw;
+      height: 32vw; } }
+  @media (min-width: 1200px) {
+    #map1 {
+      width: 420px;
+      height: 400px; } }
+
+.humb {
+  position: absolute;
+  color: #ffffff;
+  top: 2px;
+  left: 8px;
+  font-size: 4.2vw; }
+  @media (min-width: 480px) {
+    .humb {
+      font-size: 4.4vw; } }
+
+.menu_icon_li {
+  display: none;
+  background-color: #ea6e26;
+  position: absolute;
+  opacity: 0.7;
+  z-index: 100;
+  list-style: none;
+  text-align: left;
+  top: 28px;
+  padding: 0 23.8vw; }
+  @media (min-width: 480px) {
+    .menu_icon_li {
+      padding: 6vw 11vw;
+      margin-left: 6vw;
+      margin-top: 3vw; } }
+  .menu_icon_li .list {
+    color: #ffffff;
+    font-size: 7.8vw; }
+    @media (min-width: 480px) {
+      .menu_icon_li .list {
+        font-size: 2.4vw; } }
+
+.list:hover {
+  color: #6bb8b7; }
+
+/*# sourceMappingURL=style.css.map */
