@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html <?php language_attributes(); ?>>
 <head>
     <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
+  <meta charset="<?php bloginfo('charset'); ?>">
   <title>不思議な魅力cuba</title>
   <meta name="description" content="">
   <meta name="author" content="">
@@ -28,10 +28,12 @@
   <meta name="google-site-verification" content="lhJmuvzQwWwrpzxY9V40CiYSfNtPP9Yme8hUn4gatOw" />
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <?php wp_head(); ?>
     </head>
   
 </head>
-<body>
+<body <?php body_class(); ?>>
     <header>
         
        <div class="topimg">
@@ -55,7 +57,7 @@
     if ( $wpq->have_posts() ) :
         while ( $wpq->have_posts() ): $wpq->the_post();
     ?>
-            <h5>Title</h5>
+            <h2 class=h2-2>町の名前</h2>
             <p><?php echo get_the_title(); ?></p>
             <h5>URL</h5>
             <p><?php echo get_the_permalink(); ?></p>
@@ -71,87 +73,82 @@
     /* ↑↑記事ループのサンプルコード↑↑ */
     ?>
     </div>
-
-        <div class="fadein">
+    　　<div class="fadein">
         <h2>where're you going?</h2>
         </div>
-         <div class="container">
+        <div class="container">
           <div class="row">
             <div class="twelve columns">
-                <div class="mainbox"> 
-                    <div class="mainitem1 "><a href="index.html"> 
-                        <p class="mainp fadein">キューバの中心地</p>
+        
+        
+
+        <?php /* ↓↓記事ループのサンプルコード2↓↓ */
+        $wpq = new WP_Query(array(
+        'post_type' => array('post'),  
+        'category_name' => 'city'   
+        ));
+        if ( $wpq->have_posts() ) :
+        while ( $wpq->have_posts() ): $wpq->the_post();
+        ?>  
+
+            <div class="mainbox"> 
+                    <div class="mainitem1 "><a href="<?php echo get_the_permalink(); ?>">
+                        <p class="mainp fadein"><?php echo get_the_excerpt(); ?></p>
                         <img class="star" src="<?php echo get_template_directory_uri(); ?>/images/star2.png" alt="star">
-                        <p class="mainp2 fadein">Habana</p></a>
+                        <p class="mainp2 fadein"><?php echo get_the_title(); ?></p></a>
                     </div>
-                    <div class="mainitem2"><img class="sp fadein" src="<?php echo get_template_directory_uri(); ?>/images/1sp.jpg" alt="habana"><img class="pc fadein" src="<?php echo get_template_directory_uri(); ?>/images/1pc.jpg" alt="habana">
+                    <div class="mainitem2"><img class="sp fadein" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="habana"><img class="pc fadein" src="<?php echo get_the_post_thumbnail_url(); ?>"alt="habana">
                     </div>
-                </div>
-                <div class="mainbox">
-                    <div class="mainitem1"><a href="index.html">
-                        <p class="mainp fadein">ビーチリゾート</p>
-                        <img class="star" src="<?php echo get_template_directory_uri(); ?>/images/star2.png" alt="star">
-                        <p class="mainp2 fadein">Vradero</p></a>
-                    </div>
-                    <div class="mainitem2"><img class="sp fadein" src="<?php echo get_template_directory_uri(); ?>/images/2sp.jpg" alt="varadero"><img class="pc fadein" src="<?php echo get_template_directory_uri(); ?>/images/2pc.jpg" alt="varadero">
-                    </div>
-                </div>
-                <div class="mainbox">
-                    <div class="mainitem1"><a href="index.html">
-                        <p class="mainp fadein">キューバの古都</p>
-                        <img class="star" src="<?php echo get_template_directory_uri(); ?>/images/star2.png" alt="star">
-                        <p class="mainp2 fadein">Trinidad</p></a>
-                    </div>
-                    <div class="mainitem2"><img class="sp fadein" src="<?php echo get_template_directory_uri(); ?>/images/3sp.jpg" alt="trinidad"><img class="pc fadein" src="<?php echo get_template_directory_uri(); ?>/images/3pc.jpg" alt="trinidad">
-                    </div>
-                </div>
-                <div class="mainbox">    
-                    <div class="mainitem1"><a href="santiago.html">
-                        <p class="mainp fadein">第二の都市</p>
-                        <img class="star" src="<?php echo get_template_directory_uri(); ?>/images/star2.png" alt="star">
-                        <p class="mainp2 m2_4 fadein ">Santiago de cuba</p></a>
-                    </div>
-                    <div class="mainitem2"><img class="sp fadein" src="<?php echo get_template_directory_uri(); ?>/images/4sp.jpg" alt="santiago"><img class="pc fadein" src="<?php echo get_template_directory_uri(); ?>/images/4pc.jpg" alt="santiago">             
-                    </div>
-                </div>
             </div>
-          </div>
-        </div>
+       
+        <?php
+        endwhile;
+        endif;
+        wp_reset_query();
+    
+        /* ↑↑記事ループのサンプルコード2↑↑ */
+        ?>
+         </div></div></div>
+
         <div class="fadein">
         <h2 class="h2_2">What's cuba like?</h2>
         </div>
         <div class="container">
           <div class="row">
             <div class="twelve columns">
-                <div class="mainbox">
-                    <div class="mainitem1"><a href="index.html">
-                        <p class="mainp fadein">ホームステイ体験</p>
+
+        <?php /* ↓↓記事ループのサンプルコード2-2↓↓ */
+        $wpq = new WP_Query(array(
+        'post_type' => array('post'),  
+        'category_name' => 'life'   
+        ));
+        if ( $wpq->have_posts() ) :
+        while ( $wpq->have_posts() ): $wpq->the_post();
+        ?>   
+            <div class="mainbox"> 
+                    <div class="mainitem1 "><a href="index.html"> 
+                        <p class="mainp fadein"><?php echo get_the_excerpt(); ?></p>
                         <img class="star" src="<?php echo get_template_directory_uri(); ?>/images/star2.png" alt="star">
-                        <p class="mainp2 fadein">CASA</p></a>
-                        </div>
-                    <div class="mainitem2"><img class="sp fadein" src="<?php echo get_template_directory_uri(); ?>/images/5sp.jpg" alt="casa"><img class="pc fadein" src="<?php echo get_template_directory_uri(); ?>/images/5pc.jpg" alt="casa">
+                        <p class="mainp2 fadein"><?php echo get_the_title(); ?></p></a>
+                    </div>
+                    <div class="mainitem2"><img class="sp fadein" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="habana"><img class="pc fadein" src="<?php echo get_the_post_thumbnail_url(); ?>"alt="habana">
                     </div>
                 </div>
-                <div class="mainbox">
-                    <div class="mainitem1"><a href="index.html">
-                        <p class="mainp fadein">お金の話し</p>
-                        <img class="star" src="<?php echo get_template_directory_uri(); ?>/images/star2.png" alt="star">
-                        <p class="mainp2 fadein">CUC/PCU</p></a> 
-                    </div>
-                    <div class="mainitem2"><img class="sp fadein" src="<?php echo get_template_directory_uri(); ?>/images/6sp.jpg" alt="money"><img class="pc fadein" src="<?php echo get_template_directory_uri(); ?>/images/6pc.jpg" alt="money">
-                    </div>
-                </div>    
-                <div class="mainbox">    
-                    <div class="mainitem1"><a href="index.html">
-                        <p class="mainp fadein">フライト</p>
-                        <img class="star" src="<?php echo get_template_directory_uri(); ?>/images/star2.png" alt="star">
-                        <p class="mainp2 fadein">ACCESS</p></a>
-                    </div>
-                    <div class="mainitem2"><img class="sp fadein" src="<?php echo get_template_directory_uri(); ?>/images/7sp.jpg" alt="access"><img class="pc fadein" src="<?php echo get_template_directory_uri(); ?>/images/7pc.jpg" alt="access">
-                    </div>
-                </div>
-          </div>
-        </div>
+        <?php
+        endwhile;
+        endif;
+        wp_reset_query();
+    
+        /* ↑↑記事ループのサンプルコード2-2↑↑ */
+        ?>
+        </div></div></div>
+
+
+
+
+
+
+                    
     
         
     </main>
@@ -173,5 +170,6 @@
     });
 });
 </script>
+<?php wp_footer(); ?>
 </body>
 </html>
