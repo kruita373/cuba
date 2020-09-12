@@ -80,7 +80,7 @@
         while ( $wpq->have_posts() ): $wpq->the_post();
         ?>   
             <div class="mainbox"> 
-                    <div class="mainitem1 "><a href="index.html"> 
+                    <div class="mainitem1 "><a href="<?php echo get_the_permalink(); ?>">
                         <p class="mainp fadein"><?php echo get_the_excerpt(); ?></p>
                         <img class="star" src="<?php echo get_template_directory_uri(); ?>/images/star2.png" alt="star">
                         <p class="mainp2 fadein"><?php echo get_the_title(); ?></p></a>
