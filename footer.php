@@ -16,6 +16,18 @@
     });
 });
 </script>
+<script>
+  $(function(){
+    $(document).ready(function(){
+
+      $(".humb").click(function () {
+        $(this).next().slideToggle();
+      });
+
+    });
+  });
+</script>
+
 <?php wp_footer(); ?>
 </body>
 </html>

@@ -39,6 +39,14 @@
        <div class="topimg">
            <img class="sp" src="<?php echo get_template_directory_uri(); ?>/images/topsp.jpg" alt="top画像">
            <img class="pc" src="<?php echo get_template_directory_uri(); ?>/images/toppc.jpg" alt="top画像">
+           <div class="humb"><i class="fa fa-bars" aria-hidden="true"></i></div>
+           <ul class="menu_icon_li">
+              <li><a class="list" href="index.html">top</a></li> 
+              <li><a class="list" href="index.html">habana</a></li>
+              <li><a class="list" href="index.html">varadero</a></li>
+              <li><a class="list" href="index.html">trinidad</a></li>
+              <li><a class="list" href="santiago.html">santiago de cuba</a></li>
+            </ul>
            <div class="box1"></div>
            
            <p class="comment fadein">不思議な魅力にきっとあなたも虜になる</p>
