@@ -271,7 +271,8 @@ a:hover p {
   display: block; }
   @media (min-width: 480px) {
     .pain {
-      width: 50%; } }
+      width: 50%;
+	  overflow: scroll;	  } }
 
 h3 {
   background: rgba(107, 184, 183, 0.5);
@@ -304,10 +305,10 @@ h3 {
   font-size: 3.2vw; }
   @media (min-width: 480px) {
     .going2 {
-      font-size: 1.197vw; } }
+      font-size: 1.28vw; } }
   @media (min-width: 1200px) {
     .going2 {
-      font-size: 16px; } }
+      font-size: 12px; } }
 
 #map1 {
   width: 70vw;
