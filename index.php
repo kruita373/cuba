@@ -20,32 +20,7 @@
 　</header>
     <main>
     
-    <div class="loopsample">
-    <h4>記事ループのサンプル</h4>
-    <?php /* ↓↓記事ループのサンプルコード↓↓ */
-    $wpq = new WP_Query(array(
-        'post_type' => array('post'),  
-        'category_name' => 'city'   
-    ));
-    if ( $wpq->have_posts() ) :
-        while ( $wpq->have_posts() ): $wpq->the_post();
-    ?>
-            <h2 class=h2-2>町の名前</h2>
-            <p><?php echo get_the_title(); ?></p>
-            <h5>URL</h5>
-            <p><?php echo get_the_permalink(); ?></p>
-            <h5>Image</h5>
-            <p><?php echo get_the_post_thumbnail_url(); ?></p>
-            <h5>Except</h5>
-            <p><?php echo get_the_excerpt(); ?></p>
-    <?php
-        endwhile;
-    endif;
-    wp_reset_query();
     
-    /* ↑↑記事ループのサンプルコード↑↑ */
-    ?>
-    </div>
     　　<div class="fadein">
         <h2>where're you going?</h2>
         </div>
