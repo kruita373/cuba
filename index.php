@@ -7,10 +7,10 @@
            <div class="humb"><i class="fa fa-bars" aria-hidden="true"></i></div>
            <ul class="menu_icon_li">
               <li><a class="list" href="index.php">top</a></li> 
-              <li><a class="list" href="/index.php?p=15">habana</a></li>
-              <li><a class="list" href="/index.php?p=16">varadero</a></li>
-              <li><a class="list" href="/index.php?p=18">trinidad</a></li>
-              <li><a class="list" href="/index.php?p=19">santiago de cuba</a></li>
+              <li><a class="list" href="<?php echo get_the_permalink(15); ?>">habana</a></li>
+              <li><a class="list" href="<?php echo get_the_permalink(16); ?>">varadero</a></li>
+              <li><a class="list" href="<?php echo get_the_permalink(18); ?>">trinidad</a></li>
+              <li><a class="list" href="<?php echo get_the_permalink(17); ?>">santiago de cuba</a></li>
             </ul>
            <div class="box1"></div>
            
